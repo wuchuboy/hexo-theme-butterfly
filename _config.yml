@@ -764,7 +764,7 @@ subtitle:
   # source: 2  調用一句網（簡體） http://yijuzhan.com/
   # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: false
+  source: 3
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
     - 风来疏竹，风过而竹不留声；雁度寒潭，雁去而潭不留影。故君子事来而心始现，事去而心随空。
@@ -796,7 +796,7 @@ wordcount:
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: true
+medium_zoom: false
 
 # fancybox
 # https://fancyapps.com/fancybox/
