@@ -2,6 +2,7 @@ footer:
   framework: 框架
   theme: 主题
 
+
 copy:
   success: 复制成功
   error: 复制错误
@@ -54,6 +55,7 @@ pagination:
 comment: 评论
 
 aside:
+  card_ip: 当前访问用户
   articles: 文章
   tags: 标签
   categories: 分类

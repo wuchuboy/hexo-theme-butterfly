@@ -224,10 +224,7 @@ aside:
     archive: true
     tag: true
     category: true
-  card_visitor:
-    enable: true
-    sort_order: # Don't modify the setting unless you know how it works
-
+  card_ip: true
   card_author:
     enable: true
     description:
@@ -952,7 +949,8 @@ inject:
   - <script src="/js/fish.js"></script>
   - <script src="/js/myfooter.js"></script>
   - <script src="/js/snowflake.js"></script>
-  - <script src="/js/visitor.js"></script>
+  - <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+  - <script src="/js/ip_content.js"></script>
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
