@@ -209,7 +209,7 @@ footer:
     enable: true
     since: 2024
   custom_text: <a href="#">  <img  class="icp-icon"  src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png"><span>川公网安备12345678号</span></a>
-  copyright: false # Copyright of theme and framework
+  copyright: true # Copyright of theme and framework
 
 # aside (側邊欄)
 # --------------------------------------
@@ -448,7 +448,7 @@ valine:
   appKey: vv2kKVwLzl0fRkVT3vqA1Gtx
   avatar: 'monsterid' # gravatar style https://valine.js.org/#/avatar
   serverURLs: https://89wgggtu.lc-cn-n1-shared.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: /img/background.svg # valine background
+  bg: https://img.zsyyblog.com/comment_bg.gif # valine background
   visitor: false
   option:
 
@@ -598,6 +598,29 @@ site_verification:
   #   content: xxxxxx
   # - name: baidu-site-verification
   #   content: xxxxxxx
+
+
+# electric_clock
+# see https://anzhiy.cn/posts/fc18.html
+electric_clock:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude:
+  # - /posts/
+  # - /about/
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+  qweather_key: 3ca692443d2e4c51bbf052d6aa842636 # 和风天气key
+  gaud_map_key: # 高得地图web服务key
+  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+  rectangle: 112.982279,28.19409 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -856,14 +879,14 @@ pjax:
 # Inject the css and script (aplayer/meting)
 aplayerInject:
   enable: false
-  per_page: true
+  per_page: false
 
 # Snackbar (Toast Notification 彈窗)
 # https://github.com/polonel/SnackBar
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: false
+  enable: true
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
@@ -918,10 +941,13 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+   - <link rel="stylesheet" href="/css/cursor.css">
+   - <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="xxxx"></script>
-
+  - <script src="/js/fish.js"></script>
+  - <script src="/js/myfooter.js"></script>
+  - <script src="/js/snowflake.js"></script>
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
